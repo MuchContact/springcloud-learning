@@ -23,7 +23,7 @@ feign:
   sentinel:
     enabled: true #打开sentinel对feign的支持
 service-url:
-  user-service: http://nacos-user-service
+  user-service: http://localhost:8206
 management:
   endpoints:
     web:

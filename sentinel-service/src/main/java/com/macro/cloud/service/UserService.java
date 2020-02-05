@@ -15,14 +15,14 @@ public interface UserService {
     CommonResult create(@RequestBody User user);
 
     @GetMapping("/user/{id}")
-    CommonResult<User> getUser(@PathVariable Long id);
+    CommonResult<User> getUser(@PathVariable("id") Long id);
 
     @GetMapping("/user/getByUsername")
-    CommonResult<User> getByUsername(@RequestParam String username);
+    CommonResult<User> getByUsername(@RequestParam("username") String username);
 
     @PostMapping("/user/update")
     CommonResult update(@RequestBody User user);
 
     @PostMapping("/user/delete/{id}")
-    CommonResult delete(@PathVariable Long id);
+    CommonResult delete(@PathVariable("id") Long id);
 }
